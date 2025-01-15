@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "austenc.tailwind-docs",
+    "bourhaouta.tailwindshades",
+    "ms-playwright.playwright",
+    "christian-kohler.npm-intellisense",
+    "vue.volar"
+    // "vue.vscode-typescript-vue-plugin"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "res": {
+    "swiper_games": [
+      {
+        "title": "女神联盟:契约",
+        "imgPc": "https://www.shunchenkj.com/static/imgs/banner_nslm_pc.png",
+        "imgMb": "https://www.shunchenkj.com/static/imgs/banner_nslm_mb.png",
+        "shiling": "https://www.shunchenkj.com/static/imgs/shiling/12.png",
+        "order": 1
+      },
+      {
+        "title": "绝地塔防",
+        "imgPc": "https://www.shunchenkj.com/static/imgs/banner_jdtf_pc.png",
+        "imgMb": "https://www.shunchenkj.com/static/imgs/banner_jdtf_mb.png",
+        "shiling": "https://www.shunchenkj.com/static/imgs/shiling/16.png",
+        "order": 2
+      }
+    ],
+    "topic_games": [
+      {
+        "title": "女神联盟:契约",
+        "desc": "唯美女神养成,征服星辰大海",
+        "img": "https://www.shunchenkj.com/static/imgs/game_nslm.png",
+        "order": 1
+      },
+      {
+        "title": "绝地塔防",
+        "desc": "休闲与策略的塔防游戏",
+        "img": "https://www.shunchenkj.com/static/imgs/game_jdtf.png",
+        "order": 2
+      },
+      {
+        "title": "魔卡之耀",
+        "desc": "魔卡之耀",
+        "img": "https://www.shunchenkj.com/static/imgs/game_mkzy.png",
+        "order": 3
+      }
+    ],
+    "topic_news": [
+      {
+        "title": "丰富多彩的下午茶与节庆活动",
+        "desc": "丰富多彩的下午茶与节庆活动",
+        "img": "/images/news1.png",
+        "order": 1,
+        "ctime": "2022-04-01"
+      },
+      {
+        "title": "迁桥之喜，重新开始",
+        "desc": "迁桥之喜，重新开始",
+        "img": "/assets/images/news2.png",
+        "order": 2,
+        "ctime": "2022-06-01"
+      },
+      {
+        "title": "燃动激情，放眼未来",
+        "desc": "燃动激情，放眼未来",
+        "img": "/assets/images/news3.png",
+        "order": 3,
+        "ctime": "2022-07-01"
+      }
+    ]
+  },
+  "status": 0,
+  "msg": "success"
+}

@@ -1,0 +1,69 @@
+{
+  "res": {
+    "lists": [
+      {
+        "title": "女神联盟-契约",
+        "img": "https://www.shunchenkj.com/static/imgs/games/女神联盟契约.jpg",
+        "order": 1,
+        "desc": "女神联盟-契约",
+        "time": "2017年",
+        "items": [
+          {
+            "text": "9月公司成立，同月公司上线了第一款休闲类产品《休闲A》",
+            "mounth": "9月"
+          },
+          {
+            "text": "上线了第一款传奇类产品《传奇A》平均月流水达500W",
+            "mounth": "10月"
+          },
+          {
+            "text": "上线了第一款网游戏类产品《仙剑A》平均流水达300W",
+            "mounth": "12月"
+          }
+        ]
+      },
+      {
+        "title": "法师消魔",
+        "img": "https://www.shunchenkj.com/static/imgs/games/法师消魔.jpg",
+        "order": 2,
+        "desc": "法师消魔",
+        "time": "2018",
+        "mounth": "4月",
+        "items": [
+          {
+            "text": "上线了独家代理的第一款卡牌类产品《武侠A》平均月流水达300W",
+            "mounth": "4月"
+          },
+          {
+            "text": "上线了渠道独家代理的放置卡牌《挂机A》平均月流水300W",
+            "mounth": "8月"
+          },
+          {
+            "text": "公司9人团队达到月流水1000万成就",
+            "mounth": "9月"
+          },
+          {
+            "text": "公司9人团队达到月流水1500万成就",
+            "mounth": "12月"
+          }
+        ]
+      },
+      {
+        "title": "绝地塔防",
+        "img": "https://www.shunchenkj.com/static/imgs/games/绝地塔防.jpg",
+        "order": 3,
+        "desc": "绝地塔防",
+        "time": "2019",
+        "mounth": "4月",
+        "items": [
+          {
+            "text": "公司上线休闲、卡牌、MMO、塔防类产品共计10款，公司也从9人团队发展到发行架构齐全的50人团队",
+            "mounth": "12月"
+          }
+        ]
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "success"
+}

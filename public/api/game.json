@@ -1,0 +1,32 @@
+{
+  "res": {
+    "lists": [
+      {
+        "title": "女神联盟-契约",
+        "img": "https://www.shunchenkj.com/static/imgs/games/女神联盟契约.jpg",
+        "order": 1,
+        "desc": "女神联盟-契约"
+      },
+      {
+        "title": "法师消魔",
+        "img": "https://www.shunchenkj.com/static/imgs/games/法师消魔.jpg",
+        "order": 2,
+        "desc": "法师消魔"
+      },
+      {
+        "title": "绝地塔防",
+        "img": "https://www.shunchenkj.com/static/imgs/games/绝地塔防.jpg",
+        "order": 3,
+        "desc": "绝地塔防"
+      },
+      {
+        "title": "灵笼",
+        "img": "https://www.shunchenkj.com/static/imgs/games/女神联盟契约.jpg",
+        "order": 4,
+        "desc": "灵笼"
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "success"
+}
