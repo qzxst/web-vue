@@ -5,8 +5,9 @@ import Footer from "@/components/Footer.vue";
 import server from "@/api/server";
 
 const page = ref("game");
-provide("msg", "game");
 const games = ref<any>([]);
+
+provide("msg", "game");
 
 onMounted(async () => {
   await server.get("/api/game.json").then((res) => {
@@ -33,8 +34,13 @@ onMounted(async () => {
       <!-- 使用grid -->
       <div
         v-for="game in games.lists"
-        class="p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        class="relative rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out"
       >
+        <!-- <button
+          class="border border-red-200 absolute bottom-36 w-[6rem] left-1/2 -translate-x-1/2 bg-blue-500 text-white p-2 rounded-md"
+        >
+          下载
+        </button> -->
         <img :alt="game.title" :src="game.img" class="w-full rounded-t-lg" />
         <div class="p-4">
           <h2 class="text-xl font-semibold">{{ game.title }}</h2>

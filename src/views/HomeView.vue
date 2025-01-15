@@ -43,7 +43,7 @@ onMounted(async () => {
         infos.swiper_games = res.data.banner;
         infos.topic_games = res.data.games;
         infos.topic_news = res.data.news;
-      }, 3000);
+      }, 1000);
     })
     .catch((err) => {
       console.log(err);
