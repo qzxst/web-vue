@@ -24,6 +24,7 @@ declare module 'vue' {
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     Index: typeof import('./src/components/news/Index.vue')['default']
     Layout: typeof import('./src/components/home/Layout.vue')['default']
+    Loding: typeof import('./src/components/Loding.vue')['default']
     Main: typeof import('./src/components/join/Main.vue')['default']
     News: typeof import('./src/components/home/News.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
