@@ -1,65 +1,63 @@
 <template>
-  <div class="">
-    <section class="mt-[2rem]">
-      <div class="px-[2rem] md:px-[4rem]">
-        <h1 class="text-center text-3xl font-bold">社会招聘</h1>
-        <div class="relative flex items-center justify-items-center">
-          <div class="h-[2px] bg-red-500 w-full" />
-          <div class="text-red-500 text-2xl font-bold">RECRUIT</div>
-          <div class="h-[2px] bg-red-500 w-full" />
-        </div>
+  <section class="mt-[2rem]">
+    <div class="px-[2rem] md:px-[4rem]">
+      <h1 class="text-center text-3xl font-bold">社会招聘</h1>
+      <div class="relative flex items-center justify-items-center">
+        <div class="h-[2px] bg-red-500 w-full" />
+        <div class="text-red-500 text-2xl font-bold">RECRUIT</div>
+        <div class="h-[2px] bg-red-500 w-full" />
       </div>
-      <ol
-        v-if="RECRUIT.length > 0"
-        class="grid grid-cols-2 gap-2 p-[2rem] md:p-[4rem] md:grid-cols-4 md:gap-4"
+    </div>
+    <ol
+      v-if="RECRUIT.length > 0"
+      class="grid grid-cols-2 gap-2 p-[2rem] md:p-[4rem] md:grid-cols-4 md:gap-4"
+    >
+      <li
+        v-for="item in RECRUIT"
+        class="p-1 grid justify-items-center text-center"
       >
-        <li
-          v-for="item in RECRUIT"
-          class="p-1 grid justify-items-center text-center"
-        >
-          <a :href="item.href" :target="item.target">
-            <img :src="item.icon" alt="" class="" />
-            <p>{{ item.title }}</p>
-            <p>{{ item.content }}</p>
-          </a>
-        </li>
-      </ol>
-      <div
-        class="text-center text-red-500 text-2xl font-bold flex justify-center items-center"
-        v-else
-      >
-        暂无数据
-      </div>
-      <div class="px-[2rem] md:px-[4rem]">
-        <h1 class="text-center text-3xl font-bold">联系我们</h1>
-        <div class="w-full relative flex items-center justify-items-center">
-          <div class="h-[2px] w-full bg-red-500" />
-          <div class="text-red-500 text-2xl font-bold">COOPERATION</div>
-          <div class="w-full h-[2px] bg-red-500" />
-        </div>
-      </div>
-      <ol
-        v-if="COOPERATION.length > 0"
-        class="grid grid-cols-2 gap-2 p-[2rem] md:p-[4rem] md:grid-cols-3 md:gap-4"
-      >
-        <li
-          v-for="item in COOPERATION"
-          class="grid justify-items-center text-center gap-4"
-        >
+        <a :href="item.href" :target="item.target">
           <img :src="item.icon" alt="" class="" />
           <p>{{ item.title }}</p>
-          <p>{{ item.CONTACT }}</p>
-          <p>{{ item.QQ }}</p>
-        </li>
-      </ol>
-      <div
-        class="min-h-[100px] text-center text-red-500 text-2xl font-bold flex justify-center items-center"
-        v-else
-      >
-        暂无数据
+          <p>{{ item.content }}</p>
+        </a>
+      </li>
+    </ol>
+    <div
+      class="text-center text-red-500 text-2xl font-bold flex justify-center items-center"
+      v-else
+    >
+      暂无数据
+    </div>
+    <div class="px-[2rem] md:px-[4rem]">
+      <h1 class="text-center text-3xl font-bold">联系我们</h1>
+      <div class="w-full relative flex items-center justify-items-center">
+        <div class="h-[2px] w-full bg-red-500" />
+        <div class="text-red-500 text-2xl font-bold">COOPERATION</div>
+        <div class="w-full h-[2px] bg-red-500" />
       </div>
-    </section>
-  </div>
+    </div>
+    <ol
+      v-if="COOPERATION.length > 0"
+      class="grid grid-cols-2 gap-2 p-[2rem] md:p-[4rem] md:grid-cols-3 md:gap-4"
+    >
+      <li
+        v-for="item in COOPERATION"
+        class="grid justify-items-center text-center gap-4"
+      >
+        <img :src="item.icon" alt="" class="" />
+        <p>{{ item.title }}</p>
+        <p>{{ item.CONTACT }}</p>
+        <p>{{ item.QQ }}</p>
+      </li>
+    </ol>
+    <div
+      class="min-h-[100px] text-center text-red-500 text-2xl font-bold flex justify-center items-center"
+      v-else
+    >
+      暂无数据
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

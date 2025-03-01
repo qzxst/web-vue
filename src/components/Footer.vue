@@ -1,21 +1,18 @@
 <template>
-  <div
+  <footer
     class="footer min-h-[14rem] bg-gray-700 text-center p-4 text-white text-sm md:text-base"
   >
     <img :src="imgUrl" alt="" class="h-8 m-auto mt-2 mb-2" />
-    <ul class="flex justify-items-center justify-center items-center gap-2">
+    <ul class="notice flex justify-center  gap-2">
       <li>
         <router-link to="/dispute">纠纷处理</router-link>
       </li>
-      <li class="">|</li>
       <li>
         <router-link to="/agreement">用户协议</router-link>
       </li>
-      <li class="">|</li>
       <li>
         <router-link to="/technical">技术安全保障措施</router-link>
       </li>
-      <li class="">|</li>
       <li>
         <router-link to="/privacy">隐私协议</router-link>
       </li>
@@ -27,9 +24,7 @@
     <p>{{ foot.tel }} {{ foot.email }}</p>
     <p>{{ foot.address }}</p>
     <p>{{ foot.icp }}</p>
-    <!--    <el-button @click="cl">点击</el-button>-->
-    <!-- <p v-for="(item, index) in foot" :key="index">{{ item }}</p> -->
-  </div>
+  </footer>
 </template>
 
 <script lang="ts" setup>
@@ -44,8 +39,6 @@ import { onMounted, ref, watch, watchEffect } from "vue";
 // counter.increment();
 // counter.increment();
 
-//定义方法
-
 type FooterProps = {
   Copyright: string;
   address: string;
@@ -59,7 +52,9 @@ type FooterProps = {
   notice1: string;
   notice2: string;
 };
+
 const imgUrl = ref("");
+
 const foot = ref<FooterProps>({
   Copyright: "",
   notice: "",
@@ -73,6 +68,7 @@ const foot = ref<FooterProps>({
   notice1: "",
   notice2: "",
 });
+
 onMounted(async () => {
   await server.post("/api/get/footer").then((res: any) => {
     foot.value = res.data;

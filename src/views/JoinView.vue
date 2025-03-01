@@ -11,14 +11,14 @@ const loading = ref(true);
 onMounted(() => {
   setTimeout(() => {
     loading.value = false;
-  }, 3000);
+  }, 1000);
 });
 </script>
 
 <template>
   <Loding v-if="loading" />
   <div v-else>
-    <Header :page="page" />
+    <Header :page="page"></Header>
     <div class="join-banner">
       <div class="hidden md:block">
         <img src="@/assets/images/joinus_bg_pc.png" />

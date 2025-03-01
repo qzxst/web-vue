@@ -35,11 +35,13 @@ const infos = reactive<Infos>({
   topic_news: [],
 });
 
+const loading = ref(true);
 onMounted(async () => {
   await server
     .post("/v1/api/home")
     .then((res: any) => {
       setTimeout(() => {
+        loading.value = false;
         infos.swiper_games = res.data.banner;
         infos.topic_games = res.data.games;
         infos.topic_news = res.data.news;
@@ -51,11 +53,14 @@ onMounted(async () => {
 });
 </script>
 <template>
-  <Header :page="page" />
-  <Swiper :swiper_games="infos.swiper_games" />
-  <Game :topic_games="infos.topic_games" />
-  <News :topic_news="infos.topic_news" />
-  <Footer></Footer>
+  <Loding v-if="loading" />
+  <div v-else>
+    <Header :page="page" />
+    <Swiper :swiper_games="infos.swiper_games" />
+    <Game :topic_games="infos.topic_games" />
+    <News :topic_news="infos.topic_news" />
+    <Footer></Footer>
+  </div>
 </template>
 <style scoped>
 /* body{
