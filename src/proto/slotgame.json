@@ -1,0 +1,199 @@
+{
+  "nested": {
+    "slot": {
+      "nested": {
+        "Player": {
+          "fields": {
+            "playerId": {
+              "type": "string",
+              "id": 1
+            },
+            "playerName": {
+              "type": "string",
+              "id": 2
+            },
+            "balance": {
+              "type": "int64",
+              "id": 3
+            },
+            "level": {
+              "type": "int32",
+              "id": 4
+            },
+            "experience": {
+              "type": "int64",
+              "id": 5
+            },
+            "lastLoginTime": {
+              "type": "int64",
+              "id": 6
+            },
+            "createdTime": {
+              "type": "int64",
+              "id": 7
+            }
+          }
+        },
+        "Symbol": {
+          "fields": {
+            "symbolId": {
+              "type": "string",
+              "id": 1
+            },
+            "name": {
+              "type": "string",
+              "id": 2
+            },
+            "weight": {
+              "type": "int32",
+              "id": 3
+            },
+            "multiplier": {
+              "type": "int32",
+              "id": 4
+            },
+            "isWild": {
+              "type": "bool",
+              "id": 5
+            },
+            "isScatter": {
+              "type": "bool",
+              "id": 6
+            }
+          }
+        },
+        "SpinResult": {
+          "fields": {
+            "reels": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 1
+            },
+            "winAmount": {
+              "type": "int64",
+              "id": 2
+            },
+            "winLines": {
+              "rule": "repeated",
+              "type": "WinLine",
+              "id": 3
+            },
+            "isBonus": {
+              "type": "bool",
+              "id": 4
+            },
+            "newBalance": {
+              "type": "int64",
+              "id": 5
+            }
+          }
+        },
+        "WinLine": {
+          "fields": {
+            "lineIndex": {
+              "type": "int32",
+              "id": 1
+            },
+            "symbol": {
+              "type": "string",
+              "id": 2
+            },
+            "count": {
+              "type": "int32",
+              "id": 3
+            },
+            "amount": {
+              "type": "int64",
+              "id": 4
+            }
+          }
+        },
+        "Room": {
+          "fields": {
+            "roomId": {
+              "type": "string",
+              "id": 1
+            },
+            "roomName": {
+              "type": "string",
+              "id": 2
+            },
+            "maxPlayers": {
+              "type": "int32",
+              "id": 3
+            },
+            "currentPlayers": {
+              "type": "int32",
+              "id": 4
+            },
+            "minBet": {
+              "type": "int64",
+              "id": 5
+            },
+            "maxBet": {
+              "type": "int64",
+              "id": 6
+            },
+            "status": {
+              "type": "string",
+              "id": 7
+            }
+          }
+        },
+        "ClientMessage": {
+          "fields": {
+            "type": {
+              "type": "string",
+              "id": 1
+            },
+            "playerId": {
+              "type": "string",
+              "id": 2
+            },
+            "roomId": {
+              "type": "string",
+              "id": 3
+            },
+            "betAmount": {
+              "type": "int64",
+              "id": 4
+            },
+            "bonusType": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "ServerMessage": {
+          "fields": {
+            "type": {
+              "type": "string",
+              "id": 1
+            },
+            "room": {
+              "type": "Room",
+              "id": 2
+            },
+            "player": {
+              "type": "Player",
+              "id": 3
+            },
+            "spinResult": {
+              "type": "SpinResult",
+              "id": 4
+            },
+            "errorMessage": {
+              "type": "string",
+              "id": 5
+            },
+            "availableRooms": {
+              "rule": "repeated",
+              "type": "Room",
+              "id": 6
+            }
+          }
+        }
+      }
+    }
+  }
+}

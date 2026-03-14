@@ -17,10 +17,11 @@ type topic_games_type = {
   shiling: string;
 };
 type topic_news_type = {
-  imgPc: string;
-  imgMb: string;
-  name: string;
-  shiling: string;
+  title: string;
+  img: string;
+  ctime: string;
+  atime?: string;
+  content?: string;
 };
 type home_config = {
   autoplay: {

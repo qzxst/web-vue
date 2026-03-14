@@ -3,10 +3,7 @@
     <div
       class="flex justify-between justify-items-center items-center mb-4 h-[2rem] py-3"
     >
-      <img
-        class="h-[40px] md:block hidden"
-        src="@/assets/images/DYNAMIC.png"
-      />
+      <img class="h-[40px] md:block hidden" src="@/assets/images/DYNAMIC.png" />
       <router-link class="flex items-center justify-items-center" to="/dynamic">
         <div>更多</div>
         <div class="triangle"></div>

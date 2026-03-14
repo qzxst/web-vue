@@ -16,6 +16,7 @@ declare module 'vue' {
     ElTimelineItem: typeof import('element-plus/es')['ElTimelineItem']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Game: typeof import('./src/components/home/Game.vue')['default']
+    GameBattle: typeof import('./src/components/GameBattle.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -25,10 +26,13 @@ declare module 'vue' {
     Index: typeof import('./src/components/news/Index.vue')['default']
     Layout: typeof import('./src/components/home/Layout.vue')['default']
     Loding: typeof import('./src/components/Loding.vue')['default']
+    LoginForm: typeof import('./src/components/LoginForm.vue')['default']
     Main: typeof import('./src/components/join/Main.vue')['default']
     News: typeof import('./src/components/home/News.vue')['default']
+    RoomSelector: typeof import('./src/components/RoomSelector.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SlotMachine: typeof import('./src/components/SlotMachine.vue')['default']
     Swiper: typeof import('./src/components/home/Swiper.vue')['default']
   }
 }

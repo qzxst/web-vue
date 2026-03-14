@@ -14,13 +14,13 @@ import type {
 } from "@/type/home";
 
 const page = ref("home");
+const loading = ref(true);
 
 provide("msg", "home");
 interface Infos {
   swiper_games: swiper_games_type[];
   topic_games: topic_games_type[];
   topic_news: topic_news_type[];
-  abc?: "abc" | "cdb";
 }
 const infos = reactive<Infos>({
   swiper_games: [
@@ -35,7 +35,6 @@ const infos = reactive<Infos>({
   topic_news: [],
 });
 
-const loading = ref(true);
 onMounted(async () => {
   await server
     .post("/v1/api/home")

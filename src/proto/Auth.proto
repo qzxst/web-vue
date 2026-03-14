@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package auth;
+
+// 登录请求
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+// 登录响应
+message LoginResponse {
+  enum ResultCode {
+    SUCCESS = 0;
+    FAILED = 1;
+    INVALID_CREDENTIALS = 2;
+    USER_LOCKED = 3;
+  }
+
+  ResultCode code = 1;
+  string token = 2;
+  UserInfo user = 3;
+  string message = 4;
+  int64 server_time = 5;
+}
+
+// 用户信息
+message UserInfo {
+  int64 user_id = 1;
+  string username = 2;
+  string nickname = 3;
+  int32 level = 4;
+  int64 exp = 5;
+  int64 coins = 6;
+  int32 vip_level = 7;
+  repeated int32 unlocked_avatars = 8;
+  int64 register_time = 9;
+  int64 last_login_time = 10;
+}
+
+// 通用响应
+message BaseResponse {
+  int32 code = 1;
+  string message = 2;
+  int64 timestamp = 3;
+}
+
+// 心跳请求
+message HeartbeatRequest { int64 client_time = 1; }
+
+// 心跳响应
+message HeartbeatResponse {
+  int64 client_time = 1;
+  int64 server_time = 2;
+}

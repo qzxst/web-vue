@@ -59,6 +59,16 @@ export const staticRoutes = [
     name: "support",
     component: () => import("@/views/SupportView.vue"),
   },
+  {
+    path: "/cardgame",
+    name: "CardGame",
+    component: () => import("@/views/CardGameView.vue"),
+  },
+  {
+    path: "/slotgame",
+    name: "SlotGame",
+    component: () => import("@/views/SlotGameView.vue"),
+  },
 ];
 
 const router = createRouter({
