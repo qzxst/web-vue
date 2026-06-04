@@ -30,3 +30,5 @@ coverage
 .env
 docs
 pnpm-lock.yaml
+pnpm-workspace.yaml
+.zed
