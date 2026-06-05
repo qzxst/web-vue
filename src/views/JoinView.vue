@@ -9,25 +9,25 @@ provide("msg", "join");
 import Loding from "@/components/Loding.vue";
 const loading = ref(true);
 onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 1000);
+    setTimeout(() => {
+        loading.value = false;
+    }, 1000);
 });
 </script>
 
 <template>
-  <Loding v-if="loading" />
-  <div v-else>
     <Header :page="page"></Header>
-    <div class="join-banner">
-      <div class="hidden md:block">
-        <img src="@/assets/images/joinus_bg_pc.png" />
-      </div>
-      <div class="md:hidden">
-        <img src="@/assets/images/joinus_bg_mb.png" />
-      </div>
+    <Loding v-if="loading" />
+    <div v-else>
+        <div class="join-banner">
+            <div class="hidden md:block">
+                <img src="@/assets/images/joinus_bg_pc.png" />
+            </div>
+            <div class="md:hidden">
+                <img src="@/assets/images/joinus_bg_mb.png" />
+            </div>
+        </div>
+        <Main></Main>
+        <Footer></Footer>
     </div>
-    <Main></Main>
-    <Footer></Footer>
-  </div>
 </template>
