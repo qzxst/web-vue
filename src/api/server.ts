@@ -19,7 +19,7 @@ interface ResultData<T = any | null> extends Result {
   data?: T;
 }
 
-const URL: string = "";
+const URL: string = import.meta.env.VITE_API_BASE_URL || "";
 
 enum RequestEnums {
   TIMEOUT = 20000,
@@ -52,13 +52,17 @@ class RequestHttp {
      */
     this.service.interceptors.request.use(
       (config) => {
-        return {
-          ...config,
-        };
+        try {
+          const token = localStorage.getItem("token");
+          if (token && config.headers) (config.headers as any).Authorization = `Bearer ${token}`;
+        } catch (e) {
+          // ignore
+        }
+        return config;
       },
       (error: AxiosError) => {
         // 请求报错
-        Promise.reject(error);
+        return Promise.reject(error);
       }
     );
 
@@ -68,23 +72,26 @@ class RequestHttp {
      */
     this.service.interceptors.response.use(
       (response: AxiosResponse) => {
-        const { data, config } = response; // 解构
-        if (data.code === RequestEnums.OVERDUE) {
+        const { data } = response; // 解构
+        if (data && data.code === RequestEnums.OVERDUE) {
           // 登录信息失效，应跳转到登录页面，并清空本地的token
           return Promise.reject(data);
         }
         // 全局错误信息拦截（防止下载文件得时候返回数据流，没有code，直接报错）
-        if (data.code && data.code !== RequestEnums.SUCCESS) {
-          ElMessage.error(data); // 此处也可以使用组件提示报错信息
+        if (data && data.code && data.code !== RequestEnums.SUCCESS) {
+          ElMessage.error(data.msg ?? JSON.stringify(data)); // 此处也可以使用组件提示报错信息
           return Promise.reject(data);
         }
         return data;
       },
       (error: AxiosError) => {
-        const { response } = error;
+        const { response } = error as any;
         if (response) {
           this.handleCode(response.status);
+        } else {
+          ElMessage.error(error.message || "请求失败");
         }
+        return Promise.reject(error);
       }
     );
   }
